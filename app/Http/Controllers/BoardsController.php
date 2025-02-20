@@ -12,7 +12,8 @@ class BoardsController extends Controller
      */
     public function index()
     {
-        return view('boards.index');
+        $boards = Board::all();
+        return view('boards.index')->with('lists', $boards);
     }
 
     /**
